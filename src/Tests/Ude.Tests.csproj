@@ -45,7 +45,10 @@
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
   </ItemGroup>
@@ -55,9 +58,6 @@
     <Compile Include="Ude.Tests\CharsetDetectorTest.cs" />
     <Compile Include="Ude.Tests\CharsetProberTest.cs" />
     <Compile Include="Ude.Tests\CharsetDetectorTestBatch.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Nunit\nunit.framework.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -110,5 +110,6 @@
     <None Include="Data\windows1255\he1.txt" />
     <None Include="Data\windows1255\he2.txt" />
     <None Include="Data\windows1255\he3.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
