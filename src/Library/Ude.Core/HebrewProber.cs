@@ -290,10 +290,9 @@ namespace Ude.Core
             return ProbingState.Detecting;
         }
 
-        public override void DumpStatus()
+        public override string DumpStatus()
         {
-            Console.WriteLine("  HEB: {0} - {1} [Logical-Visual score]", 
-               finalCharLogicalScore, finalCharVisualScore);
+            return $"HEB: {finalCharLogicalScore} - {finalCharVisualScore} [Logical-Visual score]";
         }
         
         public override float GetConfidence()
