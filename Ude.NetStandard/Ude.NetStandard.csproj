@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68156FEE-8FE1-45F5-8267-4D0098A029D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ude.NetStandard</RootNamespace>
+    <AssemblyName>Ude.NetStandard</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Library\Ude.Core\Big5Prober.cs">
+      <Link>Ude.Core\Big5Prober.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\BitPackage.cs">
+      <Link>Ude.Core\BitPackage.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\CharDistributionAnalyser.cs">
+      <Link>Ude.Core\CharDistributionAnalyser.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\CharsetProber.cs">
+      <Link>Ude.Core\CharsetProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\Charsets.cs">
+      <Link>Ude.Core\Charsets.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\CodingStateMachine.cs">
+      <Link>Ude.Core\CodingStateMachine.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\EscCharsetProber.cs">
+      <Link>Ude.Core\EscCharsetProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\EscSM.cs">
+      <Link>Ude.Core\EscSM.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\EUCJPProber.cs">
+      <Link>Ude.Core\EUCJPProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\EUCKRProber.cs">
+      <Link>Ude.Core\EUCKRProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\EUCTWProber.cs">
+      <Link>Ude.Core\EUCTWProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\GB18030Prober.cs">
+      <Link>Ude.Core\GB18030Prober.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\HebrewProber.cs">
+      <Link>Ude.Core\HebrewProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\JapaneseContextAnalyser.cs">
+      <Link>Ude.Core\JapaneseContextAnalyser.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\LangBulgarianModel.cs">
+      <Link>Ude.Core\LangBulgarianModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\LangCyrillicModel.cs">
+      <Link>Ude.Core\LangCyrillicModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\LangGreekModel.cs">
+      <Link>Ude.Core\LangGreekModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\LangHebrewModel.cs">
+      <Link>Ude.Core\LangHebrewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\LangHungarianModel.cs">
+      <Link>Ude.Core\LangHungarianModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\LangThaiModel.cs">
+      <Link>Ude.Core\LangThaiModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\Latin1Prober.cs">
+      <Link>Ude.Core\Latin1Prober.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\MBCSGroupProber.cs">
+      <Link>Ude.Core\MBCSGroupProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\MBCSSM.cs">
+      <Link>Ude.Core\MBCSSM.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\SBCharsetProber.cs">
+      <Link>Ude.Core\SBCharsetProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\SBCSGroupProber.cs">
+      <Link>Ude.Core\SBCSGroupProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\SequenceModel.cs">
+      <Link>Ude.Core\SequenceModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\SJISProber.cs">
+      <Link>Ude.Core\SJISProber.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\SMModel.cs">
+      <Link>Ude.Core\SMModel.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\UniversalDetector.cs">
+      <Link>Ude.Core\UniversalDetector.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude.Core\UTF8Prober.cs">
+      <Link>Ude.Core\UTF8Prober.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude\CharsetDetector.cs">
+      <Link>Ude\CharsetDetector.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude\DetectionConfidence.cs">
+      <Link>Ude\DetectionConfidence.cs</Link>
+    </Compile>
+    <Compile Include="..\src\Library\Ude\ICharsetDetector.cs">
+      <Link>Ude\ICharsetDetector.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
