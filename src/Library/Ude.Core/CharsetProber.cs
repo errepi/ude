@@ -90,13 +90,13 @@ namespace Ude.Core
         }
 
         public virtual void SetOption()
-        { 
-        
+        {
+
         }
 
-        public virtual void DumpStatus()
-        { 
-        
+        public virtual string DumpStatus()
+        {
+            return string.Empty;
         }
 
         //

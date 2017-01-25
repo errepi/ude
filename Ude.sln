@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ude.Tests", "src\Tests\Ude.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ude", "src\Library\Ude.csproj", "{7BECB850-389A-44FC-8523-3EF0B2540F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ude.NetStandard", "Ude.NetStandard\Ude.NetStandard.csproj", "{68156FEE-8FE1-45F5-8267-4D0098A029D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ude.NetStandard", "src\NetStandard\Ude.NetStandard.csproj", "{68156FEE-8FE1-45F5-8267-4D0098A029D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
