@@ -33,7 +33,9 @@
     <tags>charset encoding utf-8 utf ascii windows-1252 ISO-8859</tags>
   </metadata>
   <files>
-    <file src="src/Library/bin/$configuration$/Ude.dll" target="lib/net46" />
-    <file src="src/Library/bin/$configuration$/Ude.pdb" target="lib/net46" />
+    <file src="src\Library\bin\$configuration$\Ude.dll" target="lib\net46" />
+    <file src="src\Library\bin\$configuration$\Ude.pdb" target="lib\net46" />
+    <file src="src\NetStandard\bin\$configuration$\Ude.NetStandard.dll" target="lib\netstandard1.0\Ude.NetStandard.dll" />
+    <file src="src\NetStandard\bin\$configuration$\Ude.NetStandard.pdb" target="lib\netstandard1.0\Ude.NetStandard.pdb" />
   </files>
 </package>
