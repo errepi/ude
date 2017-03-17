@@ -1,7 +1,10 @@
 version: 1.0.{build}
 image: Visual Studio 2017
 install:
-- appveyor DownloadFile https://go.microsoft.com/fwlink/?linkid=843448
+- $source = "https://go.microsoft.com/fwlink/?linkid=843448"
+- $destination = "dotnet-1.1.1-sdk-win-x64.exe"
+- Invoke-WebRequest $source -OutFile $destination
+
 - dotnet-1.1.1-sdk-win-x64.exe /quiet
 
 - cmd: >-
