@@ -10,7 +10,7 @@ install:
 
     dnu restore
 environment:
-PATH: $(PATH);$(PROGRAMFILES)\dotnet\
+ PATH: $(PATH);$(PROGRAMFILES)\dotnet\
 
 build_script:
 - appveyor-retry dotnet restore -v Minimal
