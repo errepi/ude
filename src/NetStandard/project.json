@@ -5,6 +5,7 @@
     "NETStandard.Library": "1.6.1"
   },
   "frameworks": {
-    "netstandard1.2": {}
+    "netstandard1.2": {},
+    ".NETPlatform,Version=v5.0": { }
   }
 }
