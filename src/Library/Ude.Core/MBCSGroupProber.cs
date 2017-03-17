@@ -37,6 +37,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 using System;
+using System.Text;
 
 namespace Ude.Core
 {
@@ -158,19 +159,27 @@ namespace Ude.Core
             return bestConf;
         }
 
-        public override void DumpStatus()
+        public override string DumpStatus()
         {
-            float cf;
             GetConfidence();
+
+            var sb = new StringBuilder();
             for (int i = 0; i < PROBERS_NUM; i++) {
+                if (sb.Length != 0) {
+                    sb.AppendLine();
+                }
+
                 if (!isActive[i]) {
-                    Console.WriteLine("  MBCS inactive: {0} (confidence is too low).", 
-                         ProberName[i]);
+                    sb.Append($"MBCS inactive: {ProberName[i]} (confidence is too low).");
                 } else {
-                    cf = probers[i].GetConfidence();
-                    Console.WriteLine("  MBCS {0}: [{1}]", cf, ProberName[i]);
+                    float cf = probers[i].GetConfidence();
+                    sb.Append($"MBCS {cf}: [{ProberName[i]}]");
                 }
             }
+
+            return sb.ToString();
         }
+
     }
+
 }
