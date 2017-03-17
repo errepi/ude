@@ -13,10 +13,6 @@ environment:
   matrix:
     - CLI_VERSION: Latest
 
-install:
-  # .NET Core SDK binaries
-  - ps: $url = "https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/$($env:CLI_VERSION)/dotnet-dev-win-x64.$($env:CLI_VERSION.ToLower()).zip"
-  # follow normal installation from binaries
 build_script:
 - appveyor-retry dotnet restore -v Minimal
 - dotnet build
