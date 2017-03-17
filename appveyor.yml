@@ -1,0 +1,13 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+install:
+- appveyor DownloadFile https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/DotNetCore.1.0.0-SDK.Preview2-x64.exe
+- DotNetCore.1.0.0-SDK.Preview2-x64.exe /quiet
+
+- cmd: >-
+
+    dnvm upgrade -r clr
+
+    dnu restore
+build:
+  verbosity: minimal
