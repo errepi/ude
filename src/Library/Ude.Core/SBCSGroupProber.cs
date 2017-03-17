@@ -37,6 +37,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 using System;
+using System.Text;
 
 namespace Ude.Core
 {
@@ -134,19 +135,21 @@ namespace Ude.Core
             return bestConf;
         }
 
-        public override void DumpStatus()
+        public override string DumpStatus()
         {
+            var sb = new StringBuilder();
+
             float cf = GetConfidence();
-            Console.WriteLine(" SBCS Group Prober --------begin status");
+            sb.AppendLine("SBCS Group Prober --------begin status");
             for (int i = 0; i < PROBERS_NUM; i++) {
                 if (!isActive[i])
-                    Console.WriteLine(" inactive: [{0}] (i.e. confidence is too low).", 
-                           probers[i].GetCharsetName());
+                    sb.AppendLine($" inactive: [{probers[i].GetCharsetName()}] (i.e. confidence is too low).");
                 else
-                    probers[i].DumpStatus();
+                    sb.AppendLine(probers[i].DumpStatus());
             }
-            Console.WriteLine(" SBCS Group found best match [{0}] confidence {1}.",  
-                probers[bestGuess].GetCharsetName(), cf);
+            sb.Append($"SBCS Group found best match [{probers[bestGuess].GetCharsetName()}] confidence {cf}.");
+
+            return sb.ToString();
         }
 
         public override void Reset ()

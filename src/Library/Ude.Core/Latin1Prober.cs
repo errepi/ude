@@ -171,10 +171,9 @@ namespace Ude.Core
             return confidence < 0.0f ? 0.0f : confidence * 0.5f;
         }
 
-        public override void DumpStatus()
+        public override string DumpStatus()
         {
-            Console.WriteLine(" Latin1Prober: {0} [{1}]", 
-                GetConfidence(), GetCharsetName());
+            return $"Latin1Prober: {GetConfidence()} [{GetCharsetName()}]";
         }
     }
 }

@@ -123,10 +123,9 @@ namespace Ude.Core
             return state;
         }
                 
-        public override void DumpStatus()
+        public override string DumpStatus()
         {
-            Console.WriteLine("  SBCS: {0} [{1}]", GetConfidence(), 
-                GetCharsetName());
+            return $"SBCS: {GetConfidence()} [{GetCharsetName()}]";
         }
 
         public override float GetConfidence()

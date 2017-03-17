@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,6 +9,13 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Ude.Tests</RootNamespace>
     <AssemblyName>UdeTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +30,7 @@
     <RootNamespace>Ude.Tests</RootNamespace>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,9 +45,17 @@
     <RootNamespace>Ude.Tests</RootNamespace>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=3.6.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.6.0\lib\net20\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NUnit.System.Linq, Version=0.6.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.6.0\lib\net20\NUnit.System.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
   </ItemGroup>
@@ -49,9 +66,6 @@
     <Compile Include="Ude.Tests\CharsetProberTest.cs" />
     <Compile Include="Ude.Tests\CharsetDetectorTestBatch.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Nunit\nunit.framework.dll" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -60,12 +74,6 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <ProjectReference Include="..\Library\Ude.csproj">
-      <Project>{7BECB850-389A-44FC-8523-3EF0B2540F07}</Project>
-      <Name>Ude</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <None Include="Data\big5\1.txt" />
     <None Include="Data\eucjp\1.txt" />
@@ -103,5 +111,12 @@
     <None Include="Data\windows1255\he1.txt" />
     <None Include="Data\windows1255\he2.txt" />
     <None Include="Data\windows1255\he3.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetStandard\Ude.NetStandard.csproj">
+      <Project>{68156fee-8fe1-45f5-8267-4d0098a029d0}</Project>
+      <Name>Ude.NetStandard</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
