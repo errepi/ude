@@ -9,5 +9,13 @@ install:
     dnvm upgrade -r clr
 
     dnu restore
+environment:
+PATH: $(PATH);$(PROGRAMFILES)\dotnet\
+
+build_script:
+- appveyor-retry dotnet restore -v Minimal
+- dotnet build **\project.json -c %CONFIGURATION%
+
+
 build:
   verbosity: minimal
