@@ -11,9 +11,6 @@ environment:
   matrix:
     - CLI_VERSION: Latest
 
-build_script:
-- appveyor-retry dotnet restore -v Minimal
-
 
 build:
   verbosity: minimal
