@@ -15,7 +15,6 @@ environment:
 
 build_script:
 - appveyor-retry dotnet restore -v Minimal
-- dotnet build
 
 
 build:
