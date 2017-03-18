@@ -8,7 +8,7 @@
     <ProjectGuid>{68156FEE-8FE1-45F5-8267-4D0098A029D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ude.NetStandard</RootNamespace>
+    <RootNamespace>Ude</RootNamespace>
     <AssemblyName>Ude.NetStandard</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
