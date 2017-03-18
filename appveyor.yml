@@ -12,5 +12,5 @@ environment:
     - CLI_VERSION: Latest
 
 
-build-script:
+build_script:
   dotnet msbuild
