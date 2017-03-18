@@ -1,3 +1,5 @@
+[![NuGet](https://img.shields.io/nuget/v/Ude.NetStandard.svg)](https://www.nuget.org/packages/Ude.NetStandard/)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/l85a50ik046lvw4s?svg=true)](https://ci.appveyor.com/project/yinyue200/ude)
 
 Ude is a C# port of [Mozilla Universal Charset Detector](http://mxr.mozilla.org/mozilla/source/extensions/universalchardet/src/).
