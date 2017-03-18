@@ -13,4 +13,5 @@ environment:
 
 
 build_script:
+  msbuild /t:restore
   msbuild
