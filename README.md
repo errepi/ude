@@ -14,7 +14,7 @@ Ude can recognize the following charsets:
 * windows-1253 and ISO-8859-7 (greek)
 * windows-1255 (logical hebrew. Includes ISO-8859-8-I and most of x-mac-hebrew)
 * ISO-8859-8 (visual hebrew)
-* Big-5
+* Big5
 * gb18030 (superset of gb2312)
 * HZ-GB-2312
 * Shift-JIS
@@ -27,28 +27,31 @@ Ude can recognize the following charsets:
 * ASCII
 
 ## Platform
-Windows and Linux (Mono)
-
+* Windows and Linux (Mono)
+* .NET Core
+* Universal Windows Platform
+* Windows Phone
+* Xamarin
 ## Install
-The release consists in the main library (*Ude.dll*) and a command-line client (*udetect.exe*) that can be used for one-shot tests.
+The release consists in the main library (*Ude.dll*),(*Ude.NetStandard.dll*) and a command-line client (*udetect.exe*) that can be used for one-shot tests.
 
-On Windows, compile the Visual Studio 2005 solution ude.sln. On Linux you can build the library, the example and the nunit tests with monodelop and its solution ude.mds, or using make. To compile the sources tarball:
+On Windows, compile the Visual Studio 2017 solution ude.sln. On Linux you can build the library, the example and the nunit tests with monodelop and its solution ude.mds, or using make. To compile the sources tarball:
 
     $ ./configure.sh --prefix=/usr/local --enable-tests=yes
     $ make
     
 To compile from svn:
 
-   $ ./autogen.sh --prefix=/usr/local --enable-tests=yes
-   $ make
+    $ ./autogen.sh --prefix=/usr/local --enable-tests=yes
+    $ make
    
 You can pick the library (*Ude.dll*) from the toplevel build directory (*./bin*) or you can install it to *$prefix/lib/ude* by typing:
 
-   $ make install
+    $ make install
    
 This will installs a command-line example program (*$prefix/bin/udetect*) to test the library on a given file as:
 
-   $ udetect filename 
+    $ udetect filename 
 To run the nunit tests type:
 
     $ make test
@@ -58,7 +61,7 @@ To run the nunit tests type:
     public static void Main(String[] args)
     {
         string filename = args[0];
-        using (FileStream fs = File.OpenRead(filename)) {
+        using (var fs = File.OpenRead(filename)) {
             Ude.CharsetDetector cdet = new Ude.CharsetDetector();
             cdet.Feed(fs);
             cdet.DataEnd();
