@@ -1,18 +1,5 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install:
-
-- cmd: >-
-
-    dnvm upgrade -r clr
-
-    dnu restore
-environment:
-  matrix:
-    - CLI_VERSION: Latest
-
-
 build_script:
-  - msbuild /t:restore
   - nuget restore
   - msbuild
