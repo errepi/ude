@@ -147,7 +147,10 @@ namespace Ude.Core
                 else
                     sb.AppendLine(probers[i].DumpStatus());
             }
-            sb.Append($"SBCS Group found best match [{probers[bestGuess].GetCharsetName()}] confidence {cf}.");
+
+            var bestMatch = bestGuess >= 0 ? probers[bestGuess].GetCharsetName() : null;
+
+            sb.Append($"SBCS Group found best match [{bestMatch}] confidence {cf}.");
 
             return sb.ToString();
         }
