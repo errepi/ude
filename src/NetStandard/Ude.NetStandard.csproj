@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyTitle>Ude.NetStandard</AssemblyTitle>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <VersionPrefix>1.0.2</VersionPrefix>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
+    <Authors>yinyue200</Authors>
+    <TargetFrameworks Condition="'$(LibraryFrameworks)'==''">net35;net45;netstandard1.0;netstandard1.6;netstandard2.0</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>Ude.NetStandard</AssemblyName>
+    <PackageId>Ude.NetStandard</PackageId>
+    <PackageTags>charset;codepage</PackageTags>
+    <PackageProjectUrl>https://github.com/yinyue200/ude</PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <Description>Ude.NetStandard is a compiled C# port of Mozilla Universal Charset Detector for dotnet.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.2</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>yinyue200.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <PackageLicenseFile>COPYING</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/yinyue200/ude</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\COPYING">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
