@@ -40,7 +40,7 @@ On Linux, from your favourite shell, navigate to the ude folder and type:
     $ dotnet build
     $ dotnet test
    
-On macOS, open and build the solution in Visual Studio 2019 or later, or open Terminal, navigate to the ude folder and type:
+On macOS, open and build the solution in Visual Studio for Mac, or open Terminal, navigate to the ude folder and type:
 
     $ dotnet build
     $ dotnet test
@@ -54,14 +54,18 @@ To run the example program, type:
     public static void Main(String[] args)
     {
         string filename = args[0];
-        using (FileStream fs = File.OpenRead(filename)) {
+        using (FileStream fs = File.OpenRead(filename))
+        {
             Ude.CharsetDetector cdet = new Ude.CharsetDetector();
             cdet.Feed(fs);
             cdet.DataEnd();
-            if (cdet.Charset != null) {
+            if (cdet.Charset != null)
+            {
                 Console.WriteLine("Charset: {0}, confidence: {1}", 
                      cdet.Charset, cdet.Confidence);
-            } else {
+            }
+            else
+            {
                 Console.WriteLine("Detection failed.");
             }
         }
