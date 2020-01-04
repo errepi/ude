@@ -1,34 +1,17 @@
 WINDOWS
 =======
 
-    Build the Visual Studio 2005 solution "ude.sln".
+    Build the Visual Studio 2019 solution "ude.sln".
 
 LINUX
 =====
 
-    You can build the library, the example and the nunit tests with monodelop 
-    and its solution "ude.mds", or using make. To compile the sources tarball:
+    Ensure that you have .NET Core 3.1 or later installed on your system, see https://dotnet.microsoft.com/download
 
-        $ ./configure.sh --prefix=/usr/local --enable-tests=yes
-        $ make
+    Change to the ude source directory and type:
 
-    To compile from svn:
+        $ dotnet build
+        $ dotnet test
 
-        $ ./autogen.sh --prefix=/usr/local --enable-tests=yes
-        $ make
-
-    You can pick the library (Ude.dll) from the toplevel build directory (./bin) or 
-    you can install it to $prefix/lib/ude by typing:
-
-        $ make install
-
-    This will installs a command-line example program ($prefix/bin/udetect) to test
-    the library on a given file as:
-    
-        $ udetect filename 
-
-    To run the nunit tests you can type:
-
-        $ make test
 
 

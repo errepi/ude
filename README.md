@@ -25,31 +25,29 @@ Ude can recognize the following charsets:
 * ASCII
 
 ## Platform
-Windows and Linux (Mono)
+.Net Standard 2.1 (Windows, Linux and macOS)
 
 ## Install
 The release consists in the main library (*Ude.dll*) and a command-line client (*udetect.exe*) that can be used for one-shot tests.
 
-On Windows, compile the Visual Studio 2005 solution ude.sln. On Linux you can build the library, the example and the nunit tests with monodelop and its solution ude.mds, or using make. To compile the sources tarball:
+On Windows, open and build the solution in Visual Studio 2019 or later, or open a PowerShell or Command Prompt window, navigate to the ude folder and type:
 
-    $ ./configure.sh --prefix=/usr/local --enable-tests=yes
-    $ make
+    $ dotnet build
+    $ dotnet test
     
-To compile from svn:
+On Linux, from your favourite shell, navigate to the ude folder and type:
 
-   $ ./autogen.sh --prefix=/usr/local --enable-tests=yes
-   $ make
+    $ dotnet build
+    $ dotnet test
    
-You can pick the library (*Ude.dll*) from the toplevel build directory (*./bin*) or you can install it to *$prefix/lib/ude* by typing:
+On macOS, open and build the solution in Visual Studio 2019 or later, or open Terminal, navigate to the ude folder and type:
 
-   $ make install
+    $ dotnet build
+    $ dotnet test
    
-This will installs a command-line example program (*$prefix/bin/udetect*) to test the library on a given file as:
+To run the example program, type:
 
-   $ udetect filename 
-To run the nunit tests type:
-
-    $ make test
+    $ dotnet run <path to file to test> --project src/Example
 
 ## Usage
 ### Example
