@@ -1,17 +1,31 @@
 WINDOWS
 =======
 
-    Build the Visual Studio 2019 solution "ude.sln".
+Open and build the solution in Visual Studio 2019 or later, or open a PowerShell or Command Prompt window, navigate to the ude folder and type:
 
+    $ dotnet build
+    $ dotnet test
+    
 LINUX
 =====
 
-    Ensure that you have .NET Core 3.1 or later installed on your system, see https://dotnet.microsoft.com/download
+In your favourite shell, navigate to the ude folder and type:
 
-    Change to the ude source directory and type:
+    $ dotnet build
+    $ dotnet test
+   
+MAC OS
+======
 
-        $ dotnet build
-        $ dotnet test
+Open and build the solution in Visual Studio for Mac, or open Terminal, navigate to the ude folder and type:
 
+    $ dotnet build
+    $ dotnet test
+   
+ALL PLATFORMS
+=============
 
+To run the example program, type:
+
+    $ dotnet run <path to file to test> --project src/Example
 
